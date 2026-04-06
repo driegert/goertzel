@@ -27,7 +27,7 @@ goertzel <- function(x, k){
 }
 
 #' @export
-goertzel.R <- function(x, k){
+R.goertzel <- function(x, k){
   N <- length(x)
   A = 2*pi*k/N
   B <- 2*cos(A)
