@@ -9,10 +9,14 @@ goertzel(x, k)
 \arguments{
 \item{x}{Vector containing real-valued data.}
 
-\item{k}{Vector containing the frequency components desired (k starts at 0).}
+\item{k}{Vector of real-valued elements containing the frequency components desired,
+where k = i/length(x)  (k start at 0 and should be less than length(x)).}
 }
 \description{
 Goertzel algorithm generalized to non-integer multiples of fundamental frequency
+}
+\details{
+fft(x)[1] = goertzel(x, 0)
 }
 \references{
 Sysel, Petr, and Pavel Rajmic. "Goertzel algorithm generalized to non-integer multiples of
